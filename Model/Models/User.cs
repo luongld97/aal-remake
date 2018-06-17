@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Models
 {
-  [Table("Roles")]
+  [Table("Users")]
   public class User
   {
     [Key]
