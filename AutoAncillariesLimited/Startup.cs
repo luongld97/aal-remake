@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Data;
+using Data.Implements;
+using Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -34,6 +36,10 @@ namespace AutoAncillariesLimited
 
       services.AddDbContext<AALDbContext>();
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+
+      //Add Repository to DI
+      DependencyInjection(services);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +65,30 @@ namespace AutoAncillariesLimited
           name: "default",
           template: "{controller=Home}/{action=Index}/{id?}");
       });
+    }
+
+    private static void DependencyInjection(IServiceCollection services)
+    {
+      services.AddSingleton<ICategoryRepository, CategoryRepository>();
+      services.AddSingleton<ICustomerRepository, CustomerRepository>();
+      services.AddSingleton<IExportBillRepository, ExportBillRepository>();
+      services.AddSingleton<IExportBillDetailRepository, ExportBillDetailRepository>();
+      services.AddSingleton<IExportInvoiceRepository, ExportInvoiceRepository>();
+      services.AddSingleton<IExportInvoiceDetailRepository, ExportInvoiceDetailRepository>();
+      services.AddSingleton<IImportBillRepository, ImportBillRepository>();
+      services.AddSingleton<IImportBillDetailRepository, ImportBillDetailRepository>();
+      services.AddSingleton<IImportInvoiceRepository, ImportInvoiceRepository>();
+      services.AddSingleton<IImportInvoiceDetailRepository, ImportInvoiceDetailRepository>();
+      services.AddSingleton<IProductPromotionRepository, ProductPromotionRepository>();
+      services.AddSingleton<IProductRepository, ProductRepository>();
+      services.AddSingleton<IPromotionRepository, PromotionRepository>();
+      services.AddSingleton<IProductRateRepository, ProductRateRepository>();
+      services.AddSingleton<IRoleRepository, RoleRepository>();
+      services.AddSingleton<ISupplierRepository, SupplierRepository>();
+      services.AddSingleton<IUserRepository, UserRepository>();
+      services.AddSingleton<IUserRoleRepository, UserRoleRepository>();
+      services.AddSingleton<IWarehouseRepository, WarehouseRepository>();
+      services.AddSingleton<IWarehouseDetailRepository, WarehouseDetailRepository>();
     }
   }
 }
