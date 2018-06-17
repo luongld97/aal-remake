@@ -22,6 +22,8 @@ namespace Model.Models
     [MaxLength(20)]
     public string Phone { get; set; }
     
+    [MaxLength(1)]
+    public int Level { get; set; }
     
   }
 }

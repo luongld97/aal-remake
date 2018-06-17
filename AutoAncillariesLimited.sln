@@ -1,8 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{ADF0963D-70C2-49D3-9C00-51B6B4F44B19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{38C40D97-19A5-449A-97DB-A8609214E65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoAncillariesLimited", "AutoAncillariesLimited\AutoAncillariesLimited.csproj", "{C7B29258-CBFA-434A-93DA-75AC1E054CCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF0963D-70C2-49D3-9C00-51B6B4F44B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF0963D-70C2-49D3-9C00-51B6B4F44B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF0963D-70C2-49D3-9C00-51B6B4F44B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF0963D-70C2-49D3-9C00-51B6B4F44B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C40D97-19A5-449A-97DB-A8609214E65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C40D97-19A5-449A-97DB-A8609214E65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C40D97-19A5-449A-97DB-A8609214E65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C40D97-19A5-449A-97DB-A8609214E65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B29258-CBFA-434A-93DA-75AC1E054CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B29258-CBFA-434A-93DA-75AC1E054CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B29258-CBFA-434A-93DA-75AC1E054CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B29258-CBFA-434A-93DA-75AC1E054CCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

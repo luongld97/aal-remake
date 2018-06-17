@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Volumes/data/workspace/rider-workspace/AutoAncillariesLimited/Model/Model.csproj": {
+            "projectPath": "/Volumes/data/workspace/rider-workspace/AutoAncillariesLimited/Model/Model.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -31,6 +35,10 @@
           "target": "Package",
           "version": "[2.1.0, )",
           "autoReferenced": true
+        },
+        "Pomelo.EntityFrameworkCore.MySql": {
+          "target": "Package",
+          "version": "[2.1.0-rc1-final, )"
         }
       },
       "imports": [
