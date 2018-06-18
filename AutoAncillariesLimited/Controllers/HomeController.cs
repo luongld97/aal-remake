@@ -1,17 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoAncillariesLimited.Models;
+using Data;
+using Data.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Model.Models;
 
 namespace AutoAncillariesLimited.Controllers
 {
   public class HomeController : Controller
   {
+    private readonly AALDbContext _dbContext;
+    private readonly IUserRepository _userRepository;
+    private readonly ICategoryRepository _userRoleRepository;
+
+    public HomeController(AALDbContext dbContext, IUserRepository userRepository, ICategoryRepository userRoleRepository)
+    {
+      _dbContext = dbContext;
+      _userRepository = userRepository;
+      _userRoleRepository = userRoleRepository;
+    }
+
     public IActionResult Index()
     {
+      var users = _dbContext.Users.Where(u => u.Active).ToList();
       return View();
     }
 

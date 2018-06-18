@@ -69,26 +69,26 @@ namespace AutoAncillariesLimited
 
     private static void DependencyInjection(IServiceCollection services)
     {
-      services.AddSingleton<ICategoryRepository, CategoryRepository>();
-      services.AddSingleton<ICustomerRepository, CustomerRepository>();
-      services.AddSingleton<IExportBillRepository, ExportBillRepository>();
-      services.AddSingleton<IExportBillDetailRepository, ExportBillDetailRepository>();
-      services.AddSingleton<IExportInvoiceRepository, ExportInvoiceRepository>();
-      services.AddSingleton<IExportInvoiceDetailRepository, ExportInvoiceDetailRepository>();
-      services.AddSingleton<IImportBillRepository, ImportBillRepository>();
-      services.AddSingleton<IImportBillDetailRepository, ImportBillDetailRepository>();
-      services.AddSingleton<IImportInvoiceRepository, ImportInvoiceRepository>();
-      services.AddSingleton<IImportInvoiceDetailRepository, ImportInvoiceDetailRepository>();
-      services.AddSingleton<IProductPromotionRepository, ProductPromotionRepository>();
-      services.AddSingleton<IProductRepository, ProductRepository>();
-      services.AddSingleton<IPromotionRepository, PromotionRepository>();
-      services.AddSingleton<IProductRateRepository, ProductRateRepository>();
-      services.AddSingleton<IRoleRepository, RoleRepository>();
-      services.AddSingleton<ISupplierRepository, SupplierRepository>();
-      services.AddSingleton<IUserRepository, UserRepository>();
-      services.AddSingleton<IUserRoleRepository, UserRoleRepository>();
-      services.AddSingleton<IWarehouseRepository, WarehouseRepository>();
-      services.AddSingleton<IWarehouseDetailRepository, WarehouseDetailRepository>();
+      services.AddTransient<ICategoryRepository, CategoryRepository>();
+      services.AddTransient<ICustomerRepository, CustomerRepository>();
+      services.AddTransient<IExportBillRepository, ExportBillRepository>();
+      services.AddTransient<IExportBillDetailRepository, ExportBillDetailRepository>();
+      services.AddTransient<IExportInvoiceRepository, ExportInvoiceRepository>();
+      services.AddTransient<IExportInvoiceDetailRepository, ExportInvoiceDetailRepository>();
+      services.AddTransient<IImportBillRepository, ImportBillRepository>();
+      services.AddTransient<IImportBillDetailRepository, ImportBillDetailRepository>();
+      services.AddTransient<IImportInvoiceRepository, ImportInvoiceRepository>();
+      services.AddTransient<IImportInvoiceDetailRepository, ImportInvoiceDetailRepository>();
+      services.AddTransient<IProductPromotionRepository, ProductPromotionRepository>();
+      services.AddTransient<IProductRepository, ProductRepository>();
+      services.AddTransient<IPromotionRepository, PromotionRepository>();
+      services.AddTransient<IProductRateRepository, ProductRateRepository>();
+      services.AddTransient<IRoleRepository, RoleRepository>();
+      services.AddTransient<ISupplierRepository, SupplierRepository>();
+      services.AddTransient<IUserRepository, UserRepository>();
+      services.AddTransient<IUserRoleRepository, UserRoleRepository>();
+      services.AddTransient<IWarehouseRepository, WarehouseRepository>();
+      services.AddTransient<IWarehouseDetailRepository, WarehouseDetailRepository>();
     }
   }
 }
